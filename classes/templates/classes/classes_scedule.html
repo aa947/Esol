@@ -1,0 +1,38 @@
+{% extends 'teacher/base.html' %} 
+{% block content %}
+<div>
+    <h4 align="center" > Welcome our Students </h4>
+    <h5 align="center"> Classes schedule Data, Esol Class , FEB 2019</h5>
+</div>
+
+
+
+
+<div>
+    <table class="table" width="700x" >
+        
+        <tr>
+            <td> Class Time </td>
+            <td> Teacher </td>
+            <td> Enrolled Students </td>
+            
+        </tr>
+
+        {% for class in clax %}
+            <tr>
+                <td> {{ class.class_time }} </td>
+                <td> {{ class.class_teacher }} </td>
+                <td> {% for i in  class.students_enrolled.all %} {{ i.first_name }}  {% endfor %} </td>
+                
+                
+
+
+            </tr>
+        {% endfor %}
+
+    </table>
+</div>
+
+
+
+{% endblock %}

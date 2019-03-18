@@ -1,0 +1,39 @@
+{% extends 'teacher/base.html' %} 
+{% block content %}
+<div>
+    <h4 align="center" > Welcome our Students </h4>
+    <h5 align="center"> Students Data in Esol Class , FEB 2019</h5>
+</div>
+
+
+
+
+<div>
+    <table class="table" width="700x" >
+        
+        <tr>
+            <td> First Name </td>
+            <td> Last Name </td>
+            <td> Native Language </td>
+            <td>  Level </td>
+            <td> Email </td>
+        </tr>
+
+        {% for learner in learners %}
+            <tr>
+                <td> {{ learner.first_name }} </td>
+                <td> {{ learner.last_name }} </td>
+                <td> {{ learner.first_language }} </td>
+                <td> {{ learner.class_type }} </td>
+                <td> {{ learner.email }} </td>
+
+
+            </tr>
+        {% endfor %}
+
+    </table>
+</div>
+
+
+
+{% endblock %}

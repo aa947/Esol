@@ -1,0 +1,25 @@
+{% extends 'teacher/base.html' %} 
+{% block content %}
+
+
+<table class="table" width="700x">
+    <tr>
+        <td> teacher </td>
+        <td> Teached classes </td>
+        <td> Email </td>
+
+    </tr>
+    {% for i in teachers %}
+    <tr>        
+        <td>  {{ i.teacher_name }} </td>
+        <td>  {{ i.class_name }} </td>
+        <td>  {{ i.teacher_email }} </td>
+        
+            
+
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% extends 'teacher/base.html' %} 
+{% block content %}
+<div>
+    <h4 align="center" > Welcome our Students </h4>
+    <h5 align="center"> lessions Details , Esol Class , FEB 2019</h5>
+</div>
+
+
+
+
+<div>
+    <table class="table" width="700x" >
+        
+        <tr>
+            
+            <td> students per group </td>
+            <td> topic </td>
+            <td> content </td> 
+            <td> groups data </td>
+            
+        </tr>
+
+        {% for lession in lessions %}
+            <tr>
+               
+                <td> {{ lession.number_of_students_per_group }} </td>
+                <td> {{ lession.topic }} </td>
+                <td> {{ lession.content }} </td>
+                <td> <button> <a href="{% url 'groups-page' %}"> Groups </a> </button>  </td>
+                
+                
+
+
+            </tr>
+        {% endfor %}
+
+    </table>
+</div>
+
+
+
+{% endblock %}
